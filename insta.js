@@ -1,4 +1,8 @@
-/**instagram crowler 
+/**instagram crawler 
+ * a simple JS for comparing followers and following list
+ * how to run:
+ *      copy and paste the code into the browser console and hit the enter key
+ *      
  * Ali Smithy
  * 2021 Jun 29
 */
@@ -9,8 +13,9 @@ insta = {
     qhash: {
         followings: { hash: "d04b0a864b4b54837c0d870b0e77e076", edge: "edge_follow", text: "followings" },
         followers: { hash: "c76146de99bb02f6415203be841dd25a", edge: "edge_followed_by", text: "followers" },
-        storyviewrs: { hash: "42c6ec100f5e57a1fe09be16cd3a7021", edge: "" },
-        storylistandfirstfiftyviewers: { hash: "52a36e788a02a3c612742ed5146f1676", edge: "" }
+        //------plan to add these features---------
+        // storyviewrs: { hash: "42c6ec100f5e57a1fe09be16cd3a7021", edge: "" },
+        // storylistandfirstfiftyviewers: { hash: "52a36e788a02a3c612742ed5146f1676", edge: "" }
     },
     addr: function () {
         return `https://www.instagram.com/graphql/query/?query_hash={q}&variables={"id":"${insta.ds_user_id}","include_reel":"true","fetch_mutual":"${insta.mutual}","first":"${insta.cnt}","after":"{after}"}`;
